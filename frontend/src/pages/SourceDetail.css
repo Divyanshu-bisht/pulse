@@ -1,0 +1,69 @@
+.source-detail { max-width: 920px; margin: 0 auto; padding: 36px 24px; }
+.source-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.source-detail-header h2 { font-size: 22px; }
+.source-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.range-picker { display: flex; gap: 6px; }
+.range-btn {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+.range-btn.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.clear-history-btn, .rotate-key-btn, .delete-source-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  background: transparent;
+}
+.clear-history-btn { border: 1px solid var(--warning); color: var(--warning); }
+.rotate-key-btn { border: 1px solid var(--border); color: var(--text-muted); }
+.delete-source-btn { border: 1px solid var(--danger); color: var(--danger); }
+
+.chart-card, .raw-log-card {
+  padding: 18px;
+  margin-bottom: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+}
+.chart-card h4, .raw-log-card h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+.raw-log-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.raw-log-table th {
+  text-align: left;
+  color: var(--text-faint);
+  font-weight: 500;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.raw-log-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--text-muted);
+}
+.raw-log-table td:nth-child(3) { font-family: var(--font-mono); color: var(--text); }
+
+@media (max-width: 640px) {
+  .source-detail-header { flex-direction: column; align-items: flex-start; }
+  .source-detail-actions { width: 100%; }
+}

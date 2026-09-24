@@ -1,0 +1,48 @@
+.add-source-page {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+.add-source-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  padding: 32px;
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+}
+.add-source-card h2 { font-size: 19px; margin-bottom: 4px; }
+.add-source-card label {
+  font-size: 13px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+.add-source-card input, .add-source-card select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text);
+}
+.add-source-card button {
+  margin-top: 22px;
+  padding: 11px;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+.source-key-box {
+  background: var(--bg);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  word-break: break-all;
+  margin: 10px 0;
+  border: 1px dashed var(--border);
+}
+.hint { font-size: 13px; color: var(--text-muted); line-height: 1.6; }

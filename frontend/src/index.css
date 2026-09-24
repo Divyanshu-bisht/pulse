@@ -1,0 +1,121 @@
+/* ---- Design tokens ---- */
+:root {
+  --bg: #0B1120;
+  --surface: #121A2E;
+  --surface-raised: #17203A;
+  --border: #223154;
+  --border-soft: #1A2440;
+  --text: #E7ECF5;
+  --text-muted: #8FA0BF;
+  --text-faint: #5C6C8A;
+
+  --accent: #4FD1C5;
+  --accent-strong: #2DBDAF;
+  --accent-ink: #06181A;
+
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #F87171;
+
+  --radius: 10px;
+  --radius-sm: 7px;
+
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background-color: var(--bg);
+  /* A quiet dot-grid, like graph paper on an oscilloscope -- grounds the
+     "signal monitoring" subject matter instead of decorating for its own sake. */
+  background-image: radial-gradient(circle at 1px 1px, rgba(79, 209, 197, 0.10) 1px, transparent 0);
+  background-size: 26px 26px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+input, select { font-family: inherit; }
+
+/* ---- Shared building blocks, used across every page ---- */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  display: inline-block;
+  transition: transform 0.08s ease, background-color 0.15s ease;
+}
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover { background: var(--accent-strong); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-sm { padding: 6px 14px; font-size: 13px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+}
+
+.empty-state {
+  color: var(--text-faint);
+  font-size: 14px;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: 4px 0 0;
+}
+
+.auth-error {
+  background: rgba(248, 113, 113, 0.12);
+  color: var(--danger);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .navbar-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

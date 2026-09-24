@@ -1,0 +1,75 @@
+.landing-hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 24px 60px;
+  flex-wrap: wrap;
+}
+.hero-text {
+  flex: 1;
+  min-width: 320px;
+}
+.hero-text h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  max-width: 480px;
+}
+.hero-text p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 440px;
+}
+.landing-cta {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+}
+.hero-waveform {
+  flex: 1;
+  min-width: 280px;
+}
+.hero-waveform svg {
+  width: 100%;
+  height: auto;
+}
+
+.landing-steps {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto 80px;
+  padding: 0 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.step-card {
+  padding: 22px;
+  width: 280px;
+}
+.step-index {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+.step-card h3 {
+  font-size: 17px;
+  margin: 10px 0 8px;
+}
+.step-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .landing-hero {
+    flex-direction: column-reverse;
+    padding-top: 50px;
+  }
+  .hero-text h1 { font-size: 30px; }
+}

@@ -1,0 +1,66 @@
+.rules-page { max-width: 920px; margin: 0 auto; padding: 36px 24px; }
+.rules-page h2 { font-size: 22px; margin-bottom: 18px; }
+.rule-form {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 24px;
+}
+.rule-form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.rule-form-row input, .rule-form-row select {
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  flex: 1;
+  min-width: 140px;
+  background: var(--bg);
+  color: var(--text);
+}
+.rule-form-row button { padding: 9px 18px; border: none; border-radius: var(--radius-sm); }
+
+.rules-list { display: flex; flex-direction: column; gap: 10px; }
+.rule-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 15px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rule-card.editing { border-color: var(--accent); }
+.rule-card strong { color: var(--text); font-size: 14px; }
+.rule-desc { margin: 5px 0 0; font-size: 13px; color: var(--text-muted); }
+.rule-actions { display: flex; gap: 8px; }
+.toggle-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+.toggle-btn.active { background: var(--success); color: #06180F; border-color: var(--success); }
+.edit-btn {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+.delete-btn {
+  border: 1px solid var(--danger);
+  background: transparent;
+  color: var(--danger);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
